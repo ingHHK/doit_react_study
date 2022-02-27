@@ -12,6 +12,7 @@ class LifecycleExample extends React.Component {
   }
   componentDidMount() {
     console.log('componentDidMount 호출');
+    this.forceUpdate();
   }
   componentDidUpdate() {
     console.log('componentDidUpdate 호출');
@@ -25,7 +26,7 @@ class LifecycleExample extends React.Component {
   }
   shouldComponentUpdate() {
     console.log('shouldComponentUpdate 호출');
-    return true;
+    return false;
   }
   render() {
     console.log('render 호출');
