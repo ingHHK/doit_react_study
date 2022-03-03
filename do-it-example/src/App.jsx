@@ -1,9 +1,17 @@
-import React from 'react';
-import Input from './03/Input';
+import React, { Component } from 'react';
+import './App.css';
 
-class App extends React.Component {
+class App extends Component {
   render() {
-    return <Input></Input>;
+    return (
+      <div>
+        <nav>
+          <div className="nav-wrapper">
+            <div>두잇! 리액트 시작하기</div>
+          </div>
+        </nav>
+      </div>
+    );
   }
 }
 
