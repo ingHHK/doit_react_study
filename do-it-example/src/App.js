@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './materialize.css';
+import './sass/materialize.scss';
 import './App.css';
 
 class App extends Component {
