@@ -3,11 +3,11 @@ const path = require("path");
 
 module.exports = {
     module: {
-        rles: [
+        rules: [
             {
                 test: /\.scss$/,
                 loaders: ["sass-loader"],
-                include: path.resolve(dirname, "../")
+                include: path.resolve(__dirname, "../")
             }
         ]
     }
