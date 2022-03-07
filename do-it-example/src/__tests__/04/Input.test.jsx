@@ -1,12 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { shallow } from 'enzyme';
 import Input from '../../03/Input';
 
 describe('<Input>', () => {
   it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<Input />, div);
-    ReactDOM.unmountComponentAtNode(div);
-    expect(React.isValidElement(<Input />)).toBeTruthy();
+    expect(() => {
+      shallow(<Input />);
+    }).not.toThrow();
   });
 });
