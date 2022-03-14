@@ -37,7 +37,7 @@ class CheckBox extends PureComponent {
         {errorMessage && (
           <div>
             {/* <span {...css(styles.errorText)}>{errorMessage}</span> */}
-            <span>{errorMessage}</span>
+            {<span>{errorMessage}</span>}
           </div>
         )}
       </label>
