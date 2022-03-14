@@ -9,11 +9,15 @@ describe('<Input>', () => {
       shallow(<Input name="test_name" />);
     }).not.toThrow();
   });
-  it('has one element', () => {
-    const wrapper = shallow(<Input name="test_name" />);
-    expect(wrapper.length).toEqual(1);
-    expect(wrapper).toHaveLength(1);
+
+  describe('contains <input>', () => {
+    it('renders one input', () => {
+      const wrapper = shallow(<Input name="test_name" />);
+      expect(wrapper.find('input')).toHaveLength(1);
+      expect(wrapper.find('label')).toHaveLength(1);
+    });
   });
+
   it('assigns the prop value and type', () => {
     const expectedValue = '123';
     const wrapper = shallow(<Input name="test_name" value={expectedValue} />);
