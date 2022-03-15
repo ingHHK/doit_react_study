@@ -26,4 +26,14 @@ describe('<Input>', () => {
     expect(value).toBe(expectedValue);
     expect(type).toBe('text');
   });
+
+  it('renders errorMessage', () => {
+    const wrapper = shallow(<Input name="test_name" />);
+    expect(wrapper.find('.error')).toHaveLength(0);
+    const expectedErrorMessage = '옳지 못한 값이 입력되었습니다';
+    wrapper.setProps({ errorMessage: expectedErrorMessage });
+    expect(wrapper.find('span').prop('className')).toBe('error');
+    expect(wrapper.find('.error')).toHaveLength(1);
+    expect(wrapper.html()).toContain(expectedErrorMessage);
+  });
 });
