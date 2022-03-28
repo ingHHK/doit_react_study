@@ -35,3 +35,4 @@ const addFour = addX(4);
 const multiplyTwo = multiplyX(2);
 const multiplyThree = multiplyX(3);
 const formula = x => addFour(multiplyThree(multiplyTwo(x)));
+
