@@ -1,14 +1,14 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Button from '../04/Button';
-import ButtonWithContext from './ButtonWithContext';
+import ButtonWithLoadingContext from './ButtonWithLoadingContext';
 
 function RowBComponent() {
   return <Button>버튼</Button>;
 }
 
 function RowCComponent() {
-  return <ButtonWithContext>버튼</ButtonWithContext>;
+  return <ButtonWithLoadingContext>버튼</ButtonWithLoadingContext>;
 }
 
 function TableComponent() {
@@ -55,8 +55,8 @@ class HomePageComponent extends PureComponent {
 }
 
 HomePageComponent.childContextTypes = {
-  loading: PropsTypes.bool,
-  setLoading: PropsTypes.func,
+  loading: PropTypes.bool,
+  setLoading: PropTypes.func,
 };
 
 export default HomePageComponent;
